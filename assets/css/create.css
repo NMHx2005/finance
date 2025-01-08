@@ -386,7 +386,8 @@ body {
 /* footer */
 .footer {
     background-color: #0B0B0B;
-
+    position: relative;
+    overflow: hidden; /* Đảm bảo hiệu ứng blur không tràn ra ngoài */
 }
 .footer__content {
     padding: 24px 80px;
@@ -455,6 +456,12 @@ body {
     font-size: 14px;
     color: white;
     align-items: center;
+}
+
+.blur {
+    position: absolute;
+    box-shadow: 0 0 6000px 200px #071C11;
+    left: 50%;
 }
 
 /* end footer */

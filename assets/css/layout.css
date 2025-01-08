@@ -14,6 +14,19 @@ body {
     position: relative;
 }
 
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-size: 30%;
+    bottom: 0;
+    background-image: url('../images/bg-index.jpg');
+    background-repeat: repeat;
+    opacity: 0.05;
+    z-index: -1;
+}
 
 
 /* 
