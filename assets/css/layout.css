@@ -1,0 +1,24 @@
+@media (min-width: 1440px) {
+    .custom-container {
+        width: 100%;
+        margin: 0 auto;
+        max-width: 1440px;
+    }
+
+    .inner-section {
+        padding: 0px 123px 0px 123px;
+        margin: 0px 50px;
+    }
+}
+body {
+    position: relative;
+}
+
+
+
+/* 
+body {
+    background-image: url("../images/bg-index.jpg");
+    background-repeat: repeat;
+    background-color: black;
+} */
