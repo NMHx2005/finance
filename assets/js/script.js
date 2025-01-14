@@ -1,6 +1,6 @@
 
 // Tạo chức năng cuộc trang khi click vào push
-document.getElementById('scrollToTopButton').addEventListener('click', function() {
+document.getElementById('scrollToTopButton').addEventListener('click', function () {
     window.scrollTo({
         top: 0,
         behavior: 'smooth' // Cuộn mượt lên đầu trang
@@ -91,5 +91,81 @@ if (buttonToStep3) {
 }
 
 
+const searchBox = document.querySelector(".section-3x .input-groupp input");
+const content = document.querySelector(".search-box");
+const bg = document.querySelector(".overlay");
+const btnPostPopup = document.querySelector(".comment-box");
+const btnClosePost = document.querySelector(".close");
+const btnPost = document.querySelector(".section-4x .btn-post");
 
 
+if (searchBox) {
+    searchBox.addEventListener("click", () => {
+        content.style.display = 'flex';
+        bg.style.display = 'flex';
+    });
+}
+
+if (bg && content) {
+    bg.addEventListener("click", () => {
+        content.style.display = 'none';
+        bg.style.display = 'none';
+    });
+}
+
+if (btnPost) {
+    btnPost.addEventListener("click", () => {
+        btnPostPopup.style.display = "block";
+
+    });
+}
+
+if (btnClosePost) {
+    btnClosePost.addEventListener("click", () => {
+        btnPostPopup.style.display = "none";
+        bg.style.display = 'none';
+    });
+}
+
+if (bg && btnPostPopup) {
+    bg.addEventListener("click", () => {
+        content.style.display = 'none';
+        btnPostPopup.style.display = 'none';
+    });
+}
+
+
+const btnChat = document.querySelector(".section-4x .btn-chat");
+const btnTxnS = document.querySelector(".section-4x .btn-txns");
+const chatList = document.querySelector(".section-4x .chat__list");
+const tnxsList = document.querySelector(".section-4x .list__TxnS");
+if (btnChat && btnTxnS) {
+    btnChat.addEventListener('click', function () {
+        btnChat.style.backgroundColor = '#BBF7D0';
+        btnChat.style.color = '#000';
+        btnTxnS.style.backgroundColor = '#808080';
+        btnTxnS.style.color = '#FFFFFF';
+        chatList.style.display = "flex";
+        btnPost.style.visibility = "visible";
+        tnxsList.style.display = "none";
+    });
+
+    btnTxnS.addEventListener('click', function () {
+        btnTxnS.style.backgroundColor = '#BBF7D0';
+        btnTxnS.style.color = '#000';
+        btnChat.style.backgroundColor = '#808080';
+        btnChat.style.color = '#FFFFFF';
+        chatList.style.display = "none";
+        btnPost.style.visibility = "hidden";
+        tnxsList.style.display = "block";
+    });
+}
+
+
+const btnCheckAfter = document.querySelector(".check-after-click");
+const btnCheckk = document.querySelector(".section-4x__left .btn-check-eligibility");
+if (btnCheckk) {
+    btnCheckk.addEventListener("click", () => {
+        btnCheckAfter.style.display = "block";
+    });
+}
